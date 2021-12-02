@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h3>Task 1 - Generate odd/even</h3>
+        <button class="task--one">add</button>
+        <div></div>
+    </section>
+    <section>
+        <h3>Task 2 - Book library</h3>
+        <form novalidate>
+            <div>
+                <label for="title">Title</label>
+                <input type="text" name="title">
+            </div>
+            <div>
+                <label for="author">Author</label>
+                <input type="text" name="author">
+            </div>
+            <div>
+                <label for="priority">Priority</label>
+                <select name="priority">
+                    <option value="">-- Choose priority --</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div>
+                <label for="categories">Categories</label>
+                <select name="categories">
+                    <option value="">-- Please choose category --</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="drama">Thriller</option>
+                    <option value="comedy">Comedy</option>
+                </select>
+            </div>
+            <input type="submit">
+        </form>
+        <aside>
+            <h4>My library: </h4>
+            <div></div>
+        </aside>
+    </section>
+    <div id="root"></div>
+</body>
+</html>
