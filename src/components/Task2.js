@@ -36,9 +36,7 @@ const Task2 = () => {
         arr.splice(0);
     }
 
-    const errorsAppearance = (arr, type) => {
-        arr.map(err => err.style.border = type);
-    }
+    const errorsAppearance = (arr, type) => arr.map(err => err.style.border = type);
 
     const generateObject = elements => {
         const Book = {};
