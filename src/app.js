@@ -1,6 +1,7 @@
 import Task1 from "./components/Task1";
 import Task2 from "./components/Task2";
 import Task3 from "./components/Task3";
+import Task4 from "./components/Task4";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -11,6 +12,9 @@ const { form, validateData } = Task2();
 form.addEventListener('submit', validateData);
 
 ReactDOM.render(
-    <Task3 />,
+    <>
+        <Task3 />
+        <Task4 />
+    </>,
     document.querySelector('#root')
 );

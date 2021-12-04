@@ -14,7 +14,7 @@ const Task3 = () => {
         const api = new Api();
         const data = await api.loadData();
         return data;
-    }
+    };
 
     const generateQuote = kind => {
         getData().then(data => {
@@ -26,7 +26,7 @@ const Task3 = () => {
                 setQuote(previousQuote);
             };
         });
-    }
+    };
 
     return (
         <Main>
@@ -37,7 +37,7 @@ const Task3 = () => {
                 <Button visible={ true } onClick={ () => generateQuote(true) }>Next</Button>
             </Row>
         </Main>
-    )
-}
+    );
+};
 
 export default Task3;
