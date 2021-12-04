@@ -48,18 +48,28 @@ const Task2 = () => {
         });
         books.push(Book);
         renderLibrary(books, list);
+        localStorage.setItem('library', JSON.stringify(books));
     }
 
-    const renderLibrary = (arr, DOMplace) => {
-        DOMplace.lastElementChild.textContent = '';
-        arr.map(({ title, author, priority, categories }) => {
-            const p = document.createElement('p');
-            p.textContent = `Title: ${ title }, Author: ${ author }, Priority: ${ priority }, Categories: ${ categories }`;
-            DOMplace.lastElementChild.appendChild(p);
-        });
+    const renderLibrary = (arr = [], DOMplace) => {
+        if(arr) {
+            DOMplace.lastElementChild.textContent = '';
+            arr.map(({ title, author, priority, categories }) => {
+                const p = document.createElement('p');
+                p.textContent = `Title: ${ title }, Author: ${ author }, Priority: ${ priority }, Categories: ${ categories }`;
+                DOMplace.lastElementChild.appendChild(p);
+            });
+        }
     }
 
     const clearForm = element => element.value = '';
+
+    const loadData = () => {
+        const data = JSON.parse(localStorage.getItem('library'));
+        return data ? renderLibrary(data, list) : null;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => loadData());
 
     return { form, validateData };
 };
